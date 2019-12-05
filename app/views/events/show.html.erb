@@ -1,0 +1,12 @@
+<h1><%= @event.name %> Gift Exchange</h1>
+
+<h3><%= @event.description %></h3>
+<h3>When: <%= @event.date %></h3>
+<h3>Where: <%= @event.location.full_address %></h3>
+<h3>Max cost of gift: <%= @event.dollar_amt_limit %></h3>
+
+<h3>Attendees: </h3>
+<ul>
+<% @event.users.each do |user| %>
+<li><%= link_to user.name, user %></li>
+<% end %></ul>
