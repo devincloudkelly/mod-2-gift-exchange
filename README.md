@@ -8,13 +8,14 @@ To-Do
 - set up authentication, authorization and login. ## DONE
 - Add 5th model (items) ##DONE
 - Fix event.date ## DONE
-
-
 - Build out User show page ## DONE
     - Create Event ## DONE 
-- Add nested form for Event.new and Event.edit address
+
+
+
 - Implement Bootstrap
 - Buildout header
     - logout button in header 1:05:00
     - Add wish
 - Add validations
+- Add nested form for Event.new and Event.edit address
