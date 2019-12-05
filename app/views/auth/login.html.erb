@@ -1,0 +1,12 @@
+<h1>Login</h1>
+
+<%= form_for :auth do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name%>
+<%= f.label :email %>
+<%= f.text_field :email%>
+<%= f.submit "Login"%>
+<% end %>
+<br>
+<br>
+<p>Don't have an account yet? <a href="/users/new">Create account</a></p>

@@ -4,7 +4,7 @@ To-Do
 
 - Finish CRUDding models ## DONE
 - Create wishlist indexes ## DONE
-- Create event indexes
+- Create event indexes ## DONE
 - set up authentication and login.
 - Add 5th model (items or secret_santa)
 - Add validations
