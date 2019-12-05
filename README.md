@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To-Do
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Finish CRUDding models
+- set up authentication and login.
+- Create wishlist indexes
+- Create event indexes
+- Fix event.date
+- Add nested form for Event.new and Event.edit address
+- CSS

@@ -30,6 +30,11 @@ class EventsController < ApplicationController
         end
     end
 
+    def destroy
+        locate_event
+        @event.destroy
+    end
+
     private
 
     def locate_event
