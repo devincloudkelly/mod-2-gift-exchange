@@ -1,5 +1,9 @@
 class Wish < ApplicationRecord
     belongs_to :user
     belongs_to :event
-    has_many :items
+    belongs_to :item
+
+    def item_name
+        self.item.name
+    end
 end

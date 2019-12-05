@@ -1,9 +1,13 @@
 <h1> <%= @user.name %>'s Wishlist </h1>
 <ul>
 <% @wishlist.each do |wish| %>
-<li><%= wish.item_name %></li>
+<li><%= link_to wish.item.item_name, wish.item.item_url %> <br>
+Quantity: <%= wish.qty %> <br>
+Notes: <%= wish.notes %>
+</li>
 </ul>
 <% end %>
+
 
 <% prev_event = Event.find(params[:event_id])%>
 <h3><%= link_to "Return to #{prev_event.name} Gift Exchange", "/events/#{params[:event_id]}" %></h3>
