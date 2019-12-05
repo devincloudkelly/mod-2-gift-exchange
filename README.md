@@ -9,8 +9,12 @@ To-Do
 - Add 5th model (items) ##DONE
 - Fix event.date ## DONE
 
-- Add validations
-- Build out User show page
+
+- Build out User show page ## DONE
+    - Create Event ## DONE 
 - Add nested form for Event.new and Event.edit address
 - Implement Bootstrap
-- Setup logout button in header 1:05:00
+- Buildout header
+    - logout button in header 1:05:00
+    - Add wish
+- Add validations

@@ -2,4 +2,16 @@
 
 <h3><%=  @user.name %></h3>
 
+<div class="events-block">
+    <h3>My Upcoming Gift Exchanges</h3>
+    <%= button_to "Add Gift Exchange", new_event_path, method: :get %>
+    <br>
+    <ul>
+<% @user.events.distinct.each do |event|%>
+<li><%= link_to event.name, event %></li>
+<% end %>
+</ul>
+</div>
+
+<br> <br> <br>
 <h3><%= link_to "Edit your Profile", edit_user_path %></h3>

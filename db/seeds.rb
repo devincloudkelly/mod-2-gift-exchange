@@ -5,14 +5,14 @@
 # Wish.destroy_all
 
 
-Item.create(item_name: "Furby", item_url: "https://google.com")
-Item.create(item_name: "Socks", item_url: "https://google.com")
-Item.create(item_name: "World Peace", item_url: "https://google.com")
-Item.create(item_name: "Bike", item_url: "https://google.com")
-Item.create(item_name: "T Shirt", item_url: "https://google.com")
-Item.create(item_name: "Cyber Truck", item_url: "https://google.com")
-Item.create(item_name: "nothing", item_url: "https://google.com")
-Item.create(item_name: "anything", item_url: "https://google.com")
+Item.create(item_name: "Furby", item_url: "https://lmgtfy.com/?q=furby")
+Item.create(item_name: "Socks", item_url: "https://lmgtfy.com/?q=socks")
+Item.create(item_name: "World Peace", item_url: "https://lmgtfy.com/?q=world+peace")
+Item.create(item_name: "Bike", item_url: "https://lmgtfy.com/?q=bike")
+Item.create(item_name: "T Shirt", item_url: "https://lmgtfy.com/?q=t+shirt")
+Item.create(item_name: "Cyber Truck", item_url: "https://lmgtfy.com/?q=cyber+truck")
+Item.create(item_name: "nothing", item_url: "https://lmgtfy.com/?q=nothing")
+Item.create(item_name: "anything", item_url: "https://lmgtfy.com/?q=anything")
 
 Location.create(address_1: "123 Main St.", city: "Chicago", state: "IL", zip: 60659)
 Location.create(address_1: "456 High St.", city: "Seattle", state: "WA", zip: 98116)
