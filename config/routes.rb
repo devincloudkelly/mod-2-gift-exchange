@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
+  resources :items
   resources :locations
   resources :wishes
   resources :events
   resources :users
-  get '/signup', to: 'users#new' 
+  get '/signup', to: 'users#new', as: 'signup'
   post '/signup', to: 'users#create' 
 
   get '/login', to: 'auth#login'
   post '/login', to: 'auth#verify'
+
+  get '/logout', to: 'auth#logout'
   
   get '/users/:id/wishlist/:event_id', to: 'users#wishlist'
   get '/users/:id/events', to: 'users#user_events'

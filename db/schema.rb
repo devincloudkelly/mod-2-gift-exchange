@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_235009) do
+ActiveRecord::Schema.define(version: 2019_12_05_194123) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 2019_12_04_235009) do
     t.integer "location_id"
     t.integer "dollar_amt_limit"
     t.string "description"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "item_name"
+    t.string "item_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "locations", force: :cascade do |t|
@@ -36,17 +43,17 @@ ActiveRecord::Schema.define(version: 2019_12_04_235009) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   create_table "wishes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "event_id"
-    t.string "item_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "notes"
     t.integer "qty"
-    t.string "item_url"
+    t.integer "item_id"
   end
 
 end
