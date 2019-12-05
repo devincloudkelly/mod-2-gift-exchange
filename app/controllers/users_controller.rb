@@ -36,7 +36,8 @@ class UsersController < ApplicationController
     end
 
     def user_events
-
+        locate_user
+        @events = @user.events
     end
 
     private

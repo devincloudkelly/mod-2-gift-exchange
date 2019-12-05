@@ -1,0 +1,9 @@
+<h1>My Gift Exchanges</h1>
+
+<ul>
+<% @user.events.each do |event| %>
+<li><%= event.name %></li>
+</ul>
+
+<% end %>
+<br> <br>
