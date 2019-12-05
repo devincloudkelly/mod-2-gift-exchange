@@ -13,7 +13,7 @@ class WishesController < ApplicationController
         if @wish.save
             redirect_to @wish
         else
-            renew :new
+            render :new
         end
     end
 

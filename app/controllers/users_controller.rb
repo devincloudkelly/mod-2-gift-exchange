@@ -30,6 +30,15 @@ class UsersController < ApplicationController
         end
     end
 
+    def wishlist
+        locate_user
+        @wishlist = @user.event_wishlist(params[:event_id])
+    end
+
+    def user_events
+
+    end
+
     private
 
     def locate_user
