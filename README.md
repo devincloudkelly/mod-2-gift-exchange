@@ -1,5 +1,16 @@
 # README
 
+This app is a gift exchange app. It allows you to securely log in, create gift excange events, 
+
+# Instructions
+
+1. Fork and clone this repo
+2. Run 'bundle install'
+3. Navigate to 'localhost:3000/signup' and create a user account.
+3. Run 'rails db:seed' in your terminal to seed your database.
+4. Continue in 'localhost:3000'
+
+
 To-Do
 
 - Finish CRUDding models ## DONE
@@ -10,12 +21,11 @@ To-Do
 - Fix event.date ## DONE
 - Build out User show page ## DONE
     - Create Event ## DONE 
+- Install Bootstrap ## DONE
 
-
-
-- Implement Bootstrap
 - Buildout header
     - logout button in header 1:05:00
     - Add wish
+- Style with CSS
 - Add validations
 - Add nested form for Event.new and Event.edit address
