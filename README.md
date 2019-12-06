@@ -25,7 +25,7 @@ To-Do
 
 - Buildout header
     - logout button in header 1:05:00
-    - Add wish
+    - Add wish ## DONE
 - Style with CSS
 - Add validations
-- Add nested form for Event.new and Event.edit address
+
