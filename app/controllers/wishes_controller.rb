@@ -9,7 +9,7 @@ class WishesController < ApplicationController
     end
 
     def create
-        byebug
+        
         @wish = Wish.new(wish_params)
         @wish.user = User.find(session[:user_id])
         if @wish.save
