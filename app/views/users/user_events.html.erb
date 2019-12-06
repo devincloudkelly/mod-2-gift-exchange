@@ -1,9 +1,11 @@
 <h1>My Gift Exchanges</h1>
 
 <ul>
-<% @user.events.each do |event| %>
-<li><%= event.name %></li>
+<% @user.events.distinct.each do |event| %>
+<li><%= link_to event.name, event %></li>
 </ul>
 
 <% end %>
+
 <br> <br>
+<%= button_to "Add Gift Exchange", new_event_path, method: :get %>

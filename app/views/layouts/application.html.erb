@@ -9,6 +9,16 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="navbar navbar-dark" style="background-color: #F8C537;">
+      <a class="navbar-brand" href="/users/<%= session[:user_id] %>">Giftster</a>
+
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/users/<%= session[:user_id] %>/events">My Events</a>
+        <a class="nav-item nav-link active" href="/wishes/new">Add A Wish</a>
+
+      </div>
+    </nav>
+
   <body>
     <%= yield %>
   </body>

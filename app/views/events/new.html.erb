@@ -2,12 +2,14 @@
 
 <%= form_for @event do |f| %>
 <%= f.label :name %>
-<%= f.text_field :name %>
+<%= f.text_field :name %> <br>
 <%= f.label :date %>
-<%= f.date_select :date %>
-<%= f.label :dollar_amt_limit %>
-<%= f.number_field :dollar_amt_limit %>
+<%= f.date_select :date %> <br>
+<%= f.label "Location" %>
+<%= f.collection_select :location_id, Location.all, :id, :city, prompt: true %> <br>
+<%= f.label "Gift Price Limit" %>
+<%= f.number_field :dollar_amt_limit %> <br>
 <%= f.label :description %>
-<%= f.text_area :description %>
+<%= f.text_area :description %> <br>
 <%= f.submit %>
 <% end %>

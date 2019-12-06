@@ -8,6 +8,7 @@ Notes: <%= wish.notes %>
 </ul>
 <% end %>
 <br>
-<h3><%= button_to "#{@user.name}'s Profile", @user, method: :get %></h3>
+<%= button_to "#{@user.name}'s Profile", @user, method: :get %>
 <% prev_event = Event.find(params[:event_id])%>
-<h3><%= link_to "Return to #{prev_event.name} Gift Exchange", "/events/#{params[:event_id]}" %></h3>
+<br>
+<h4><%= link_to "Return to #{prev_event.name} Gift Exchange", "/events/#{params[:event_id]}" %></h4>

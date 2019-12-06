@@ -9,7 +9,9 @@ class WishesController < ApplicationController
     end
 
     def create
+        byebug
         @wish = Wish.new(wish_params)
+        @wish.user = User.find(session[:user_id])
         if @wish.save
             redirect_to @wish
         else
@@ -42,6 +44,6 @@ class WishesController < ApplicationController
     end
 
     def wish_params
-        params.require(:wish).permit(:user_id, :event_id, :item_name, :notes, :qty, :item_url)
+        params.require(:wish).permit(:user_id, :event_id, :item_id, :notes, :qty)
     end
 end
