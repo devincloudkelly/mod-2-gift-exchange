@@ -1,9 +1,10 @@
 <h1><%= @wish.user.name %>'s wish</h1>
-
-<h3>Item: <%= @wish.item.item_name %></h3>
-<h3><%= @wish.user.name %>'s notes: <%= @wish.notes %></h3>
+<br>
+<h3><%= link_to @wish.item.item_name, @wish.item.item_url %></h3>
+<h3>Notes: <%= @wish.notes %></h3>
 <h3>Quantity: <%= @wish.qty %></h3>
-<h3><%= link_to "Link to #{@wish.item.item_name}", @wish.item.item_url %></h3>
+<h3></h3>
 <h3><%= link_to "Back to #{@wish.user.name}'s Wishlist", @wish.user %></h3>
-
-<%= button_to "Delete Wish", @wish, :method => :delete %>
+<br>
+<p><%= button_to "Delete Wish", @wish, :method => :delete %></p>
+<p><%= button_to "Edit Wish", edit_wish_path, :method => :get %></p>

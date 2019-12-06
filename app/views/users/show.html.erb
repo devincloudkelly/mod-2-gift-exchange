@@ -1,8 +1,9 @@
+
 <h1>Profile Page</h1>
+<br>
 
-<h3><%=  @user.name %></h3>
-
-<div class="events-block">
+<h2><%=  @user.name %></h2>
+<br>
     <h3>My Upcoming Gift Exchanges</h3>
     <br>
     <ul>
@@ -10,12 +11,15 @@
 <li><%= link_to event.name, event %></li>
 <% end %>
 </ul>
-</div>
 <% if @user.id == session[:user_id] %>
+
 <br> <br>
+
+<div class="buttons">
 <%= button_to "Add Gift Exchange", new_event_path, method: :get %>
 
 
-<br> <br> <br>
-<h4><%= link_to "Edit your Profile", edit_user_path %></h3>
+ <br>
+<p><%= button_to "Edit your Profile", edit_user_path, method: :get %></p>
+</div>
 <% end %>
