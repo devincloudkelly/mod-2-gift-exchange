@@ -12,10 +12,14 @@
   <nav class="navbar navbar-dark" style="background-color: #DB324D;">
       <a class="navbar-brand" href="/users/<%= session[:user_id] %>">Giftster</a>
 
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="/users/<%= session[:user_id] %>/events">My Events</a>
-        <a class="nav-item nav-link active" href="/wishes/new">Add A Wish</a>
-
+      <div class="navbar-nav d-flex flex-row">
+        <% if logged_in? %>
+        <a class="nav-item nav-link active px-4" href="/users/<%= session[:user_id] %>/events">My Events</a>
+        <a class="nav-item nav-link active px-4" href="/wishes/new">Add A Wish</a>
+        <a class="nav-item nav-link active px-4" href="/logout">Logout</a>
+        <% else %>
+        <a class="nav-item nav-link active px-4" href="/login">Login</a>
+        <% end %>
       </div>
     </nav>
 

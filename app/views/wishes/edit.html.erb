@@ -1,0 +1,13 @@
+<h1>Edit Your Wish</h1>
+
+<%= form_for @wish do |f| %>
+<%= f.label "Gift Exchange" %>
+<%= f.collection_select :event_id, Event.all, :id, :name, prompt: true %>
+<%= f.label "Item" %>
+<%= f.collection_select :item_id, Item.all, :id, :item_name, prompt: true %>
+<%= f.label :notes %>
+<%= f.text_field :notes %>
+<%= f.label :qty %>
+<%= f.number_field :qty %>
+<%= f.submit %>
+<% end %>

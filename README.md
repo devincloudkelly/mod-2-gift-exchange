@@ -22,11 +22,10 @@ To-Do
 - Build out User show page ## DONE
     - Create Event ## DONE 
 - Install Bootstrap ## DONE
-
-
-- Buildout header
-    - logout button in header 1:05:00
+- Buildout header ## DONE
+    - logout button in header 1:05:00 ## DONE
     - Add wish ## DONE
+
 - Style with CSS
 - Add validations
 - Add nested form for Event.new and Event.edit address

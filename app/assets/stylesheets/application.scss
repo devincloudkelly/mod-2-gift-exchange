@@ -16,8 +16,37 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+nav{
+    margin-bottom: 30px;
+}
 
 body{
     background-color: #D4D2D1;
     color: #56494E;
 }
+
+h1, h2, h3, h4, h5, p{
+    padding-left: 20px;
+}
+
+.buttons{
+    margin-left:20px;
+}
+
+ul{
+    list-style: none;
+    li{
+        padding: 10px;
+    }
+}
+
+a:link, a:visited{
+    color: #585B5D;
+}
+
+a:hover{
+    font-size: 103%;
+    
+}
+
+
