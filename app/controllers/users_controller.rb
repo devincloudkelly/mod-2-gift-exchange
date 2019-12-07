@@ -34,6 +34,7 @@ class UsersController < ApplicationController
     end
 
     def wishlist
+        # byebug
         locate_user
         @wishlist = @user.event_wishlist(params[:event_id])
     end
@@ -50,7 +51,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:name, :email, :password)
+        params.require(:user).permit(:name, :email, :password_digest)
     end
 
     

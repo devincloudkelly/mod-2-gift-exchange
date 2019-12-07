@@ -1,25 +1,47 @@
 
-<h1>Profile Page</h1>
+<h1><%= @user.name %>'s Profile</h1>
+<br>
 <br>
 
-<h2><%=  @user.name %></h2>
+<div class="d-inline-flex flex-column p-4">
+<h3>My Upcoming Gift Exchanges</h3>
 <br>
-    <h3>My Upcoming Gift Exchanges</h3>
-    <br>
     <ul>
-<% @user.events.distinct.each do |event|%>
-<li><%= link_to event.name, event %></li>
-<% end %>
-</ul>
+    <% @user.events.distinct.each do |event|%>
+        <li><h4><%= link_to event.name, event %></li></h4>
+    <% end %>
+    </ul>
+
 <% if @user.id == session[:user_id] %>
-
-<br> <br>
-
-<div class="buttons">
-<%= button_to "Add Gift Exchange", new_event_path, method: :get %>
-
-
- <br>
-<p><%= button_to "Edit your Profile", edit_user_path, method: :get %></p>
+    <br> 
+    <br>
+    <div class="buttons">
+    <%= button_to "Add Gift Exchange", new_event_path, method: :get %>
+    </div>
+<% end %><br> <br>
 </div>
+
+<div class="d-inline-flex flex-column p-4">
+<h3>My Wishlists</h3>
+<br>
+<ul>
+    <% @user.events.distinct.each do |event| %>
+        <li><h4><%= link_to event.name, "/users/#{@user.id}/wishlist/#{event.id}" %></h4></li>
+    <% end %>
+       
+</ul>
+
+<% if @user.id == session[:user_id] %>
+    <br> 
+    <br>
+    <div class="buttons">
+    <%= button_to "Add Wish", new_wish_path, method: :get %>
+    </div>
+<% end %><br> <br>
+</div>
+
+<% if @user.id == session[:user_id] %>
+    <div class="buttons">
+    <p><%= button_to "Edit your Profile", edit_user_path, method: :get %></p>
+    </div>
 <% end %>

@@ -33,6 +33,7 @@ class EventsController < ApplicationController
     def destroy
         locate_event
         @event.destroy
+        redirect_to "/users/#{session[:user_id]}"
     end
 
     private

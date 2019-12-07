@@ -4,7 +4,8 @@
 <h3>Notes: <%= @wish.notes %></h3>
 <h3>Quantity: <%= @wish.qty %></h3>
 <h3></h3>
-<h3><%= link_to "Back to #{@wish.user.name}'s Wishlist", @wish.user %></h3>
+<h3><%= link_to "Back to #{@wish.user.name}'s Wishlist", "/users/#{@wish.user_id}/wishlist/#{@wish.event_id}" %></h3>
 <br>
+<% flash[:event_id] = @wish.event_id%>
 <p><%= button_to "Delete Wish", @wish, :method => :delete %></p>
 <p><%= button_to "Edit Wish", edit_wish_path, :method => :get %></p>

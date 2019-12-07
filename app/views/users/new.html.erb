@@ -1,5 +1,6 @@
 <h1>Create New User</h1>
 
+<div class="form">
 <%= form_for @user do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name%>
@@ -11,5 +12,6 @@
 <%= f.password_field :password_confirmation%>
 <%= f.submit %>
 <% end %>
+</div>
 
 <p>Already have an account? <%= link_to "Log in", login_path %>.</p>

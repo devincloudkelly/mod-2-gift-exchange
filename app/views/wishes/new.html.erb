@@ -1,13 +1,15 @@
 <h1>Add a New Wish</h1>
-
+<br>
+<div class="form">
 <%= form_for @wish do |f| %>
 <%= f.label "Gift Exchange" %>
-<%= f.collection_select :event_id, Event.all, :id, :name, prompt: true %>
+<%= f.collection_select :event_id, Event.all, :id, :name, prompt: true %> <br>
 <%= f.label "Item" %>
-<%= f.collection_select :item_id, Item.all, :id, :item_name, prompt: true %>
+<%= f.collection_select :item_id, Item.all, :id, :item_name, prompt: true %> <br>
 <%= f.label :notes %>
-<%= f.text_field :notes %>
+<%= f.text_field :notes %> <br>
 <%= f.label :qty %>
-<%= f.number_field :qty %>
-<%= f.submit %>
-<% end %>
+<%= f.number_field :qty %> <br> <br>
+<%= f.submit %> 
+<% end %> 
+</div>

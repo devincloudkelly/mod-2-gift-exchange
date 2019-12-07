@@ -1,13 +1,14 @@
 <h1>My Gift Exchanges</h1>
-
+<br>
 <ul>
 <% @user.events.distinct.each do |event| %>
-<li><%= link_to event.name, event %></li>
-
-
-<% end %></ul>
-
-<br> <br>
+    <li><h4><%= link_to event.name, event %></h4>
+       <p><%= event.normal_date %></p>
+    </li>
+<% end %>
+</ul>
+<br>
+<br>
 <div class="buttons">
-<%= button_to "Add Gift Exchange", new_event_path, method: :get %>
+    <%= button_to "Add Gift Exchange", new_event_path, method: :get %>
 </div>

@@ -33,8 +33,10 @@ class WishesController < ApplicationController
     end
 
     def destroy
+        # byebug
         locate_wish
         @wish.destroy
+        redirect_to "/users/#{session[:user_id]}/wishlist/#{flash[:event_id]}"
     end
 
     private

@@ -1,16 +1,20 @@
-<h1> <%= @user.name %>'s Wishlist </h1>
+<% prev_event = Event.find(params[:event_id])%>
+<h1> <%= @user.name %>'s Wishlist for <%= prev_event.name %> </h1>
 <ul>
 <% @wishlist.each do |wish| %>
-<li><%= link_to wish.item.item_name, wish.item.item_url %> <br>
-Quantity: <%= wish.qty %> <br>
-Notes: <%= wish.notes %>
-</li>
+    <li><%= link_to wish.item.item_name, wish %> <br>
+    Quantity: <%= wish.qty %> <br>
+    Notes: <%= wish.notes %>
+    </li>
 
 <% end %></ul>
 <br>
+    <div class="buttons">
+            <%= button_to "Add Wish", new_wish_path, method: :get %>    
+        </div>
+        <br>
 <div class="buttons">
 <%= button_to "#{@user.name}'s Profile", @user, method: :get %>
 </div>
-<% prev_event = Event.find(params[:event_id])%>
 <br>
 <h4><%= link_to "Return to #{prev_event.name} Gift Exchange", "/events/#{params[:event_id]}" %></h4>

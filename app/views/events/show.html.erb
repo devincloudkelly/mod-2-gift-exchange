@@ -1,4 +1,5 @@
 <h1><%= @event.name %> Gift Exchange</h1>
+<br>
 <% date = @event.date.to_s.split("-") %>
 
 <h3>When: <%= date[1] %>/<%= date[2] %>/<%= date[0] %></h3>
@@ -8,7 +9,9 @@
 <h3>Attendees: </h3>
 <ul>
 <% @event.users.distinct.each do |user| %>
-<li><%= link_to user.name, "/users/#{user.id}/wishlist/#{@event.id}" %></li>
+<li><h5><%= link_to user.name, "/users/#{user.id}/wishlist/#{@event.id}" %></h5></li>
 <% end %></ul>
 <br><br><br>
+<div class="buttons">
 <%= button_to "Delete Event", @event, :method => :delete %>
+</div>
