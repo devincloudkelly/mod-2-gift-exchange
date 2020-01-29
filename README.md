@@ -1,6 +1,6 @@
 # README
 
-This app is a gift exchange app. It allows you to securely log in, create gift excange events, 
+This app is a gift exchange app. It allows you to log in, create gift exchange events, create wishes and wishlists for those events and view other attendees and their wishlists for the exchanges.
 
 # Instructions
 
