@@ -2,6 +2,10 @@
 
 This app is a gift exchange app. It allows you to log in, create gift exchange events, create wishes and wishlists for those events and view other attendees and their wishlists for the exchanges.
 
+## Watch the video to see how it works: ##
+
+![Giftster gift exchange video](public/giftster-demo-gif.gif)
+
 # Instructions
 
 1. Fork and clone this repo
@@ -11,8 +15,5 @@ This app is a gift exchange app. It allows you to log in, create gift exchange e
 5. Run 'rails db:seed' in your terminal to seed your database.
 6. Continue in 'localhost:3000'
 
-## Watch the video to see how it works: ##
-
-[![Giftster gift exchange video](http://img.youtube.com/vi/ahB3YWBcK-g/0.jpg)](http://www.youtube.com/watch?v=ahB3YWBcK-g "Giftster gift exchange web app")
 
 
